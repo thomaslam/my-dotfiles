@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/tlaminator/.oh-my-zsh
 
+# Set default editor
+export VISUAL=vim
+export EDITOR="$EDITOR"
+
 # Set CLICOLOR if you want Ansi Colors in iTerm2 
 export CLICOLOR=1
 
@@ -131,4 +135,18 @@ alias frontend='cd ~/Documents/Web-development/front-end-stuff'
 alias chdoc='open //usr/local/ch/docs/index.html'
 alias cbuild='gcc -Wall -std=c99'
 alias learnos='cd ~/Documents/learn-operating-systems'
+alias gitcf='git config --global -e'
+alias cpdotfiles="cp ~/.tmux.conf ~/Documents/Web-development/dotfiles/.tmux.conf;
+                  cp ~/.vimrc ~/Documents/Web-development/dotfiles/.vimrc;
+                  cp ~/.zshrc ~/Documents/Web-development/dotfiles/.zshrc"
+
+#cpdotfiles() {
+  #cp ~/.tmux.conf ~/Documents/Web-development/dotfiles/.tmux.conf;
+  #cp ~/.vimrc ~/Documents/Web-development/dotfiles/.vimrc;
+  #cp ~/.zshrc ~/Documents/Web-development/dotfiles/.zshrc
+#}
+
+# tmux aliases
+alias tml='tmux ls'
+alias tmkill='tmux kill-session -t'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
